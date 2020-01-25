@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Composition II</title>
+  <style media="screen">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    div {
+      box-sizing: border-box;
+      float: left;
+      width: 100%;
+      height: 100%;
+      border: 10px solid black;
+    }
+
+    .column {
+      height: 37.5%;
+      width: 25%;
+      border-left: 0px;
+      border-top: 0px;
+      border-bottom: 20px solid black;
+    }
+
+    .square {
+      height: 37.5%;
+      width: 75%;
+      background-color: red;
+      border-top: 0px;
+      border-right: 0px;
+      border-bottom: 20px solid black;
+    }
+
+    .top {
+      border-bottom: 0px;
+    }
+
+    .bottom {
+      border-bottom: 50px solid black;
+    }
+
+    .row {
+      height: 12.5%;
+      width: 25%;
+      border-bottom: 0px;
+      background-color: blue;
+      border-left: 0px;
+      border-top: 0px;
+    }
+
+    .white{
+      width: 62.5%;
+      background-color: white;
+      border-left: 10px solid black;
+    }
+
+    .small{
+      width: 12.5%;
+      background-color: white;
+      border-bottom: 10px solid black;
+      border-right: 0px;
+      border-left: 10px solid black;
+    }
+
+    .yellow{
+      background-color: yellow;
+      border-bottom: 0px;
+      border-top: 10px solid black;
+      border-left: 10px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="column bottom">
+  </div>
+  <div class="square top">
+  </div>
+  <div class="column">
+  </div>
+  <div class="square">
+
+  </div>
+  <div class="row">
+  </div>
+  <div class="row white">
+  </div>
+  <div class="row small">
+  </div>
+  <div class="row">
+  </div>
+  <div class="row white">
+  </div>
+  <div class="row small yellow">
+
+  </div>
+</body>
+
+</html>
