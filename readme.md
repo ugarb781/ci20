@@ -6,4 +6,4 @@ Parsons School of Design
 
 ## Assignment 1
 
-Mondrian Composition [https://ugarb781.github.io/ci20/CoreLab/01/mondrian-final.html]
+[Mondrian Composition] (https://ugarb781.github.io/ci20/CoreLab/01/mondrian-final.html)
