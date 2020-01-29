@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mondrian Composition</title>
+    <style media="screen">
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      div {
+        box-sizing: border-box;
+        float: left;
+        width: 100%;
+        height: 100%;
+        border: 10px solid black;
+      }
+      .column{
+        height: 75%;
+        width: 25%;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+      }
+      .white{
+        height:50%;
+        width: 100%;
+        float: left;
+        border-top: 0px;
+        border-left: 0px;
+        border-bottom: 60px solid black;
+      }
+
+      .bottom{
+        border-bottom: 0px;
+      }
+      .red{
+        height: 75%;
+        width: 75%;
+        background-color: red;
+        border-top: 0px;
+        border-right: 0px;
+      }
+      .row{
+        height: 25%;
+        width: 100%;
+        border-left: 0px;
+        border-bottom: 0px;
+        border-right: 0px;
+      }
+      .blue{
+        width: 25%;
+        height: 100%;
+        background-color: blue;
+        border-left: 0px;
+        border-bottom: 0px;
+        border-top: 0px;
+      }
+      .horizontal{
+        width: 62.5%;
+        height: 100%;
+        border-bottom: 0px;
+        border-left: 10px solid black;
+      }
+      .two-color{
+        width: 12.5%;
+        height: 100%;
+        border-bottom: 0px;
+        border-right: 0px;
+        border-top: 0px;
+      }
+
+      .corner{
+        height: 50%;
+        width: 100%;
+        border-right: 0px;
+        border-top: 0px;
+        border-left: 0px;
+      }
+
+      .yellow{
+        background-color: yellow;
+        border-bottom: 0px;
+        border-top: 10px solid black;
+        border-left: 0px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="column">
+      <div class="white">
+      </div>
+      <div class="white bottom">
+      </div>
+
+    </div>
+    <div class="red">
+
+    </div>
+    <div class="row">
+      <div class="blue">
+      </div>
+      <div class="white horizontal">
+
+      </div>
+      <div class="two-color">
+        <div class="corner">
+
+        </div>
+        <div class="corner yellow">
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
