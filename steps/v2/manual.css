@@ -1,0 +1,159 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(96, 56, 194);
+  color: white;
+  font-family: schwager-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  transform: scale(-1,1);
+  text-align: center;
+}
+
+h1:hover{
+  animation-name: back;
+  animation-duration: 3s;
+}
+h2 { margin: 0.83em 0;}
+
+div {
+  flex: 1;
+  /* border: 1px solid white; */
+}
+
+/* span{
+  background-color: white;
+  color:mediumslateblue;
+  padding: 5px;
+  border-radius: 3px;
+} */
+.content {
+  flex-direction: column;
+  padding-top: 30%;
+  width:100%;
+  /* padding-bottom: 60%; */
+  /* width: 100%; */
+}
+.meridiem {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+}
+
+.dot{
+  background-color: yellow;
+  height: 10px;
+  width: 40px;
+
+  position: relative;
+  left: calc(50% - 20px);
+}
+
+.time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.hours {
+  font-size: 200px;
+  width: 20%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.steps-container{
+
+}
+
+.title{
+  text-align: center;
+}
+
+.instruction{
+
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes back {
+ from{transform: scale(-1,1);
+
+ }
+ to{
+   transform: scale(1,1);
+ }
+}
+
+@media (max-width: 700px) {
+
+  /* more css goes here*/
+  /* if the above statement is true it will apply these styles */
+  /* reset the original */
+  .content {
+    /* flex-direction: column; */
+    padding-top: 30%;
+    width: 100%;
+  }
+
+  /* .content :nth-child(1){
+    order:2;
+  }
+  .content :nth-child(2){
+    order: 3;
+  }
+  .content :nth-child(3){
+    order: 1;
+  } */
+
+  .meridiem {
+    justify-content: flex-start;
+  }
+
+  .night {
+    width: 50%;
+  }
+
+  .time-container {
+
+  }
+
+  .hours {
+    font-size: 80px;
+    width: 20%;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .title{
+    font-weight: 700;
+    /* padding: 40px 5px 100px 5px;
+    margin-left: 0.83em;
+    margin-right: 0.83em; */
+    padding-top: 20%;
+    padding-bottom: 40%;
+    border-bottom: 10px solid white;
+    font-size: 30px;
+
+  }
+
+  .steps-container{
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-right: 0.63em;
+    margin-left: .63em;
+  }
+
+  .instruction{
+    padding-top: 20px;
+    flex-direction: column;
+  }
+}
