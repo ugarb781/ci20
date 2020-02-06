@@ -163,36 +163,58 @@ span{
   width:100%;
 }
 
+.steps{
+  display:flex;
+  flex-direction: row;
+  text-align: left;
+}
 
-.instruction-content{
+.steps-title{
   display: flex;
   flex-direction: column;
-  padding-top: 5%;
-  width:100%;
 }
 
-.numeral-container {
+
+.number-container{
   display: flex;
   flex-direction: row;
-  text-align: center;
-  /* width: 20%; */
-  padding: 10px 10px 60px 50px;
-}
 
-.numeral{
-  flex: 1;
-  font-size: 300px;
-  text-shadow:0px 0px 20px white;
+}
+.number{
+  position: relative;
+  left: 20px;
+  height: 300px;
+  width: 300px;
+  /* background-image: linear-gradient(rgba(30, 8, 140, 0.94),rgba(30, 8, 140, 0.94),rgb(227, 42, 114)); */
   border: 10px solid white;
+  z-index: -1;
 }
 
-.description{
-  flex: 4;
-  text-align: left;
-  padding-left: 80px;
+.medium{
+  height: 700px;
+}
+.text-number{
+  position: relative;
+  bottom: 270px;
+  font-size: 300px;
+  font-weight: 700px;
+  color: white;
+  text-shadow:0px 0px 30px white, 0px 0px 30px white;
+  -webkit-text-stroke: 6px white;
+  text-align: center;
+}
+.description-container{
+  float: right;
+  /* display: flex; */
+  flex: 3;
   font-size: 30px;
+
+
 }
 
+.illustration-container{
+  padding-top: 5%;
+}
 .illustrated-text{
   font-size: 80px;
   font-weight: 700;
@@ -201,24 +223,68 @@ span{
   border: inherit;
 }
 
-
-#backwards{
-  unicode-bidi: bidi-override;
-  direction: rtl;
+.illustrated-text:hover{
+  cursor: pointer;
 }
 
-.without{
-  color: rgb(96, 56, 194);
+#backwards{
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
+
+#backwards:hover{
+  text-decoration: none;
+  cursor: default;
+}
+
+#normal:hover{
+  text-decoration: none;
+  cursor: default;
+}
+
+
+.on{
+  color:rgb(96, 56, 194);
 }
 
 .with{
   color: white;
 }
-
-#without,#presson:hover{
-  cursor:pointer;
+.without{
+  color:rgb(96, 56, 194);
 }
 
-#midnight{
-  display: none;
+.release{
+  color:rgb(96, 56, 194);
 }
+
+#flashing-display{
+  /* animation-name: flash;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+  text-shadow:0px 0px 20px white;
+  display:none;
+}
+
+
+.flash{
+  animation-name: flash;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* @keyframes vibe{
+  0%{
+    font-style: normal;
+
+  }
+  50%{
+    /* transform: skew(-30deg, 0deg); */
+    /* font-style: oblique;
+  }
+
+  100%{
+    font-style: normal;
+  } */

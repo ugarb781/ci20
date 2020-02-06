@@ -58,10 +58,10 @@
 
 
   }
-/*
+
   .number{
     left: 30px;
-  } */
+  }
 
   .hours {
     font-size: 50px;
@@ -71,40 +71,13 @@
     /* padding-right: 5px; */
     border: 1px solid white;
   }
-
-  .main-area{
-    flex-direction: column;
-  }
-
-  .numeral-container {
-    flex-direction: column;
-    padding: 10px 10px 60px 10px;
-
-    /* width: 20%; */
-  }
-  .numeral{
-    flex: inherit;
-
-  }
-  .description{
-    flex: inherit;
-    text-align: center;
-    padding-left: inherit;
-  }
-
-  .illustrated-text{
-    border: inherit;
-    font-size: 40px;
-    text-align: center;
-  }
-  /* }
   .steps{
     flex-direction: column;
     text-align: center;
 
-  } */
+  }
 
-  /* .medium{
+  .medium{
     height: 500px;
     }
 
@@ -117,6 +90,6 @@
   .illustrated-text{
     border: inherit;
     font-size: 50px;
-  } */
+  }
 
 }

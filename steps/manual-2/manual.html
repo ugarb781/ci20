@@ -15,197 +15,121 @@
     <div class="title">
       <h3>setting up your alarm</h3>
     </div>
-    <div class= "big-container">
-    <div class="meridiem">
-      <div class="night top">
-        <div class="dot" id="pm">
+    <div class="big-container">
+      <div class="meridiem">
+        <div class="night top">
+          <div class="dot" id="pm">
+
+          </div>
+          <h2>pm</h2>
 
         </div>
-        <h2>pm</h2>
+        <div class="night">
+          <div class="dot" id="am">
 
-      </div>
-      <div class="night">
-        <div class="dot" id="am">
+          </div>
+          <h2>am</h2>
 
         </div>
-        <h2>am</h2>
-
       </div>
+
+
+
+      <div class="time-container">
+        <div class="hours" id="hour-display">
+          00
         </div>
-
-
-
-    <div class="time-container">
-      <div class="hours" id="hour-display">
-        00
-      </div>
-      <div class="hours center-display">
-        :
-      </div>
-      <div class="hours" id="minute-display">
-        00
-      </div>
-      <div class="hours center-display">
-        :
-      </div>
-      <div class="hours" id="seconds-display">
-        00
-      </div>
-    </div>
-    </div>
-    </div>
-    <div class="content-two">
-      <div class="title-two">
-        <h1>setting up your alarm</h1>
-      </div>
-      <div class="steps">
-        <div class="steps-title">
-
-          <div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>1</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              Find the &nbsp;<span> ALARM ON/OFF </span> &nbsp;button on the back of the alarm clock.
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text" id="backwards">alarm <span class="without">on</span>/off</span>
-
-                </div>
-                <div class="illustration">
-                  <span class="illustrated-text" id="normal">alarm <span class="without">on</span>/off</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>2</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              Press &nbsp;<span>alarm on/off</span> &nbsp; and the clock should display the alarm is on.
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text presson" onclick="changetext()">alarm <span class="on">on</span>/off</span>
-
-                </div>
-              </div>
-            </div>
-
-          </div><div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>3</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              When the alarm is on, hold the&nbsp; <span>alarm</span>&nbsp; button and the clock will display
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text alarm-display" onclick="showMid()">alarm</span>
-                </div>
-                <div class="illustration">
-                  <span class="illustrated-text" id="flashing-display">12:00 am</span>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>4</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              While holding onto the ALARM button, press&nbsp; <span>hour</span>&nbsp; button until it is the desired hour.
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text release">alarm</span>
-                </div>
-                <div class="illustration">
-
-                  <span class="illustrated-text hour-display" onclick="showHour()">hour</span>
-                </div>
-                <div class="illustration">
-                  <span class="illustrated-text hours" id="hour-counter">00</span><span class="illustrated-text hours" id="ampm-counter">:00 am</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>5</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              Then, press the <span>minute</span> button until it is the desired minute.
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text release">alarm</span>
-                </div>
-                <div class="illustration">
-                  <span class="illustrated-text minute-display" onclick="showMinute()">minute</span>
-                </div>
-                <div class="illustration">
-                  <span class="illustrated-text hours" id="previous-counter">00</span><span class="illustrated-text hours">:</span><span class="illustrated-text hours" id="minute-counter">00</span><span class="illustrated-text hours" id ="m_ampm"> am</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="number-container">
-            <div class="medium">
-            <div class="number">
-            </div>
-            <div class="text-number">
-              <em>6</em>
-
-            </div>
-          </div>
-            <div class="description-container">
-              Last, release the <span>alarm</span> button.
-              <div class="illustration-container">
-                <div class="illustration">
-                  <span class="illustrated-text release releasebttn" onclick="release()">alarm</span>
-                </div>
-                  <div class="illustration">
-                    <span class="illustrated-text hours" id="release-hc">00</span><span class="illustrated-text hours">:</span><span class="illustrated-text hours" id="release-mc">00</span><span class="illustrated-text hours" id="release-ampm"> am</span>
-                  </div>
-            </div>
-
-          </div>
-
-          </div>
-
-
-          </div>
+        <div class="hours center-display">
+          :
+        </div>
+        <div class="hours" id="minute-display">
+          00
+        </div>
+        <div class="hours center-display">
+          :
+        </div>
+        <div class="hours" id="seconds-display">
+          00
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="content-two">
+    <div class="title-two">
+      <h1>setting up your alarm</h1>
+    </div>
+    <div class="instruction-content">
+      <div class="numeral-container">
+        <div class="numeral">
+          1
+        </div>
+        <div class="description">
+          <p>find the &nbsp;<span>alarm on/off</span>&nbsp; button on the back of the alarm clock.</p>
+          <p> <span class="illustrated-text" id="backwards">alarm <span class="without">on</span>/off</span> </p>
+          <p> <span class="illustrated-text">alarm <span class="without">on</span>/off</span> </p>
+        </div>
+      </div>
+    </div>
+    <div class="numeral-container">
+      <div class="numeral">
+        2
+      </div>
+      <div class="description">
+        <p>press&nbsp;<span>alarm on/off</span>&nbsp;and the clock should display the alarm is on.</p>
+        <p> <span class="illustrated-text" id="presson" onclick="toggleOn()">alarm <span class="without" id="without">on</span>/off</span> </p>
+      </div>
+    </div>
+    <div class="numeral-container">
+      <div class="numeral">
+        3
+      </div>
+      <div class="description">
+      <p>when the alarm is on, hold the&nbsp;<span>alarm</span>&nbsp; button and the clock will display</p>
+      <p> <span class="illustrated-text" id="revealmid" onclick="showMid()">alarm</span> </p>
+      <p> <span class="illustrated-text hours" id="midnight">12:00 am</span> </p>
+      </div>
+    </div>
+    <div class="numeral-container">
+      <div class="numeral">
+        4
+      </div>
+      <div class="description">
+        <p>while holding onto the alarm button, press&nbsp;<span>hour</span>&nbsp;button until it is the desired hour.</p>
+        <p> <span class="illustrated-text without">alarm</span> </p>
+        <p> <span class="illustrated-text"  id="hour-display" onclick="showHour()">hour</span> </p>
+        <p> <span class="illustrated-text hours" id="hour-counter">00</span><span class="illustrated-text hours" id="apm-counter">:00am</span> </p>
+      </div>
+    </div>
+    <div class="numeral-container">
+      <div class="numeral">
+        5
+      </div>
+      <div class="description">
+        <p>then, press the&nbsp;<span>minute</span>&nbsp;button until it is the desired minute.</p>
+        <p> <span class="illustrated-text without">alarm</span> </p>
+        <p> <span class="illustrated-text" id="md" onclick="showMin()">minute</span> </p>
+        <p> <span class="illustrated-text hours" id="previous">00</span><span class="illustrated-text hours">:<span><span class="illustrated-text minutes" id="min">00</span><span class="illustrated-text hours" id="previous-ap">am</span> </p>
+      </div>
+    </div>
+    <div class="numeral-container">
+      <div class="numeral">
+        6
+      </div>
+      <div class="description">
+        <p>last, release the&nbsp;<span>alarm</span>&nbsp;button.</p>
+        <p> <span class="illustrated-text without" id="f" onclick="ft()">alarm</span> </p>
+        <p> <span class="illustrated-text hours" id="rh">00</span><span class="illustrated-text hours">:</span><span class="illustrated-text hours" id="l">00</span><span class="illustrated-text hours" id="rp">am</span> </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+
 </body>
 <script src="manual.js" charset="utf-8"></script>
 

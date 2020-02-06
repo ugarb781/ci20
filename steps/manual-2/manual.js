@@ -74,130 +74,230 @@ window.onload = function(){
 // // //  }
 // // }
 
+//ALARM ON TOGGLE FUNCTION
 
-//press on
+function toggleOn(){
+  p = document.getElementById("presson");
+  w = document. getElementById("without");
+  p.classList.toggle("without");
+  w.classList.toggle("with");
+}
 
-presson = document.getElementsByClassName("presson");
+//TOGGLE MIDNIGHT
 
-function changetext(){
-  for (var i=0; i < presson.length; i++){
-		presson[i].classList.toggle("without");
-	}
-  on = document.getElementsByClassName("on");
-  for(var i=0; i < on.length; i++){
-    on[i].classList.toggle("with");
+function showMid(){
+  rm = document.getElementById("revealmid");
+  m = document.getElementById("midnight");
+  rm.classList.toggle("without");
+  if (m.style.display === "inline"){
+    m.style.display ="none";
+  } else{
+    m.style.display ="inline";
   }
 }
 
-alarm = document.getElementsByClassName("alarm-display");
-
-function showMid(){
-  for (var i=0; i < alarm.length; i++){
-		alarm[i].classList.toggle("without");
-    var f = document.getElementById("flashing-display");
-    // I don't know how to get it to appear at the same time???
-
-    //when f is equal to block
-    //show none
-    //if else block
-    if (f.style.display === "block"){
-      f.style.display ="none";
-    } else{
-      f.style.display = "block";
-    }
-	}
+function ft(){
+  f = document.getElementById("f");
+  f.classList.toggle("with");
 }
 
-h = document.getElementsByClassName("hour-display");
+//change HOUR
+// h = document.getElementsByClassName("hour-display");
+//
+// function changeHour(){
+//   for (var i=0; i < h.length; i++){
+// 	h[i].classList.toggle("without");
+//   var hc = document.getElementById("hour-counter").innerHTML;
+//   hc++;
+//   if (hc > 11){
+//     hc = hc - 12;
+//     document.getElementById("apm-counter").innerHTML = ":00pm";
+//   }
+//
+//   if (hc == 0){
+//     hc = 12;
+//   }
+//   document.getElementById("hour-counter").innerHTML = hc;
+// }
+// }
+
+//press on
+//
+// presson = document.getElementsByClassName("presson");
+//
+// function changetext(){
+//   for (var i=0; i < presson.length; i++){
+// 		presson[i].classList.toggle("without");
+// 	}
+//   on = document.getElementsByClassName("on");
+//   for(var i=0; i < on.length; i++){
+//     on[i].classList.toggle("with");
+//   }
+// }
+//
+// alarm = document.getElementsByClassName("alarm-display");
+//
+// function showMid(){
+//   for (var i=0; i < alarm.length; i++){
+// 		alarm[i].classList.toggle("without");
+//     var f = document.getElementById("flashing-display");
+//     // I don't know how to get it to appear at the same time???
+//
+//     //when f is equal to block
+//     //show none
+//     //if else block
+//     if (f.style.display === "block"){
+//       f.style.display ="none";
+//     } else{
+//       f.style.display = "block";
+//     }
+// 	}
+// }
+//
+h = document.getElementById("hour-display");
+//getElementById
 
 function showHour(){
-  for (var i=0; i < h.length; i++){
-		h[i].classList.toggle("without");
+		h.classList.toggle("without");
     var hc = document.getElementById("hour-counter").innerHTML;
-    var pc = document.getElementById("previous-counter").innerHTML;
-    var rhc = document.getElementById("release-hc").innerHTML;
+    var p = document.getElementById("previous").innerHTML;
+    var rh = document.getElementById("rh").innerHTML;
+    var pap = document.getElementById("previous-ap").innerHTML;
+    var rp = document.getElementById("rp").innerHTML;
     //create a counter
     //add by one
     hc++;
-    pc++;
-    rhc++;
+    p++;
+    rh++;
     //take the clock code
-    var mid = document.getElementById("ampm-counter").innerHTML;
-    if (hc > 11 && pc > 11 && rhc > 11){
+    var mid = document.getElementById("apm-counter").innerHTML;
+   if (hc > 11){
       hc = hc - 12;
-      pc = pc - 12;
-      rhc = rhc -12;
-      document.getElementById("ampm-counter").innerHTML = ":00pm";
-      document.getElementById("m_ampm").innerHTML = "pm";
-      document.getElementById("release-ampm").innerHTML = "pm";
+      p = p - 12;
+      rh = rh -12;
+      // document.getElementById("apm-counter").innerHTML = ":00pm";
+      // document.getElementById("m_ampm").innerHTML = "pm";
+      document.getElementById("apm-counter").innerHTML = ":00pm";
+      document.getElementById("previous-ap").innerHTML = "pm";
+      document.getElementById("rp").innerHTML = "pm";
     }
 
-    if (hc ==0 && pc == 0 && rhc == 0){
-      hc=12;
-      pc=12;
-      rhc = 12;
+    if (hc == 0){
+     hc=12;
+      p=12;
+      rh = 12;
       // document.getElementById("ampm-counter").innerHTML = ":00am";
 
       //not sure how to get it to display am again but it's an attempt
     }
 
-    // if (hc % 12 == 0){
+    //if (hc % 12 == 0){
     //   document.getElementById("ampm-counter").innerHTML = ":00am";
     // }
 
-    document.getElementById("previous-counter").innerHTML = pc;
+    document.getElementById("previous").innerHTML = p;
     document.getElementById("hour-counter").innerHTML = hc;
-    document.getElementById("release-hc").innerHTML =rhc;
-  }
+    document.getElementById("rh").innerHTML =rh;
+  //}
 }
 
-m = document.getElementsByClassName("minute-display");
-function showMinute(){
-  for (var i=0; i < m.length; i++){
-    m[i].classList.toggle("without");
-    var mc = document.getElementById("minute-counter").innerHTML;
-    var rmc = document.getElementById("release-mc").innerHTML;
-    mc++;
-    rmc++;
-    if (mc < 10 && rmc < 10){
-      mc = "0" + mc;
-      rmc = "0" + rmc;
-    }
-    if (mc > 59 && rmc > 59){
-      mc = mc - 59;
-      rmc = rmc -59;
+md = document.getElementById("md");
+//getElementById
+
+function showMin(){
+		md.classList.toggle("without");
+    var m = document.getElementById("min").innerHTML;
+    var l = document.getElementById("l").innerHTML;
+    // var p = document.getElementById("previous").innerHTML;
+    // var rh = document.getElementById("rh").innerHTML;
+    //create a counter
+    //add by one
+    m++;
+    l++;
+    // p++;
+    // rh++;
+    //take the clock code
+    // var mid = document.getElementById("apm-counter").innerHTML;
+    if (m< 10 ){
+     m = "0" + m;
+     l = "0" + l;
+    //       rmc = "0" + rmc;
+        }
+   if (m > 59){
+      m = m - 59;
+      l = l - 59;
+      // document.getElementById("apm-counter").innerHTML = ":00pm";
+      // document.getElementById("m_ampm").innerHTML = "pm";
+      // document.getElementById("release-ampm").innerHTML = "pm";
     }
 
-    if (mc == 0 && rmc == 0){
-      minute = 0;
+    if (m == 0){
+     m = 0;
+     l = 0;
       // document.getElementById("ampm-counter").innerHTML = ":00am";
 
       //not sure how to get it to display am again but it's an attempt
     }
 
-    // if (hc % 12 == 0){
+    //if (hc % 12 == 0){
     //   document.getElementById("ampm-counter").innerHTML = ":00am";
     // }
 
-    document.getElementById("minute-counter").innerHTML = mc;
-    document.getElementById("release-mc").innerHTML = rmc;
-    }
-  }
-
-rel = document.getElementsByClassName("releasebttn");
-function release(){
-
-  for(var i=0; i < rel.length; i++){
-    rel[i].style.color="white";
-
-    // rel[i].classList.add("flash");
-    buzz = document.getElementsByClassName("hours");
-    for(var i=0; i < buzz.length; i++){
-      buzz[i].classList.add("flash");
-    }
-  }
+    document.getElementById("min").innerHTML = m;
+    document.getElementById("l").innerHTML = l;
+    // document.getElementById("hour-counter").innerHTML = hc;
+    // document.getElementById("rh").innerHTML =rh;
+  //}
 }
 
+//
+// m = document.getElementsByClassName("minute-display");
+// function showMinute(){
+//   for (var i=0; i < m.length; i++){
+//     m[i].classList.toggle("without");
+//     var mc = document.getElementById("minute-counter").innerHTML;
+//     var rmc = document.getElementById("release-mc").innerHTML;
+//     mc++;
+//     rmc++;
+//     if (mc < 10 && rmc < 10){
+//       mc = "0" + mc;
+//       rmc = "0" + rmc;
+//     }
+//     if (mc > 59 && rmc > 59){
+//       mc = mc - 59;
+//       rmc = rmc -59;
+//     }
+//
+//     if (mc == 0 && rmc == 0){
+//       minute = 0;
+//       // document.getElementById("ampm-counter").innerHTML = ":00am";
+//
+//       //not sure how to get it to display am again but it's an attempt
+//     }
+//
+//     // if (hc % 12 == 0){
+//     //   document.getElementById("ampm-counter").innerHTML = ":00am";
+//     // }
+//
+//     document.getElementById("minute-counter").innerHTML = mc;
+//     document.getElementById("release-mc").innerHTML = rmc;
+//     }
+//   }
+//
+// rel = document.getElementsByClassName("releasebttn");
+// function release(){
+//
+//   for(var i=0; i < rel.length; i++){
+//     rel[i].style.color="white";
+//
+//     // rel[i].classList.add("flash");
+//     buzz = document.getElementsByClassName("hours");
+//     for(var i=0; i < buzz.length; i++){
+//       buzz[i].classList.add("flash");
+//     }
+//   }
+// }
+//
 
 
 
