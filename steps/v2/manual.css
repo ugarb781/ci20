@@ -4,8 +4,9 @@ html, body {
 }
 
 body {
-  background-color: rgb(96, 56, 194);
   color: white;
+  background-color: rgb(96, 56, 194);
+
   font-family: schwager-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -13,16 +14,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 h1{
-  transform: scale(-1,1);
   text-align: center;
 }
 
-h1:hover{
-  animation-name: back;
-  animation-duration: 3s;
+h2 {
+  margin: 0.83em 0;
+
 }
-h2 { margin: 0.83em 0;}
 
 div {
   flex: 1;
@@ -35,53 +35,189 @@ div {
   padding: 5px;
   border-radius: 3px;
 } */
+/*
+.page{
+  background-image: linear-gradient(rgb(96, 56, 194), blue);
+  position:absolute;
+  height: 200%;
+  width: 100%;
+} */
 .content {
   flex-direction: column;
-  padding-top: 30%;
+  padding-top: 10%;
   width:100%;
   /* padding-bottom: 60%; */
   /* width: 100%; */
 }
-.meridiem {
+
+.big-container{
+  padding-top: 10%;
   display: flex;
   flex-direction: row;
+  width: 100%;
+}
+.meridiem {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  /* width: 20%; */
+  flex: 1;
+}
 
+.night{
+  /* padding-bottom: 30px; */
+  padding-top: 30px;
+}
+
+.top{
+  padding-bottom: 0px;
 }
 
 .dot{
   background-color: yellow;
   height: 10px;
   width: 40px;
-
   position: relative;
   left: calc(50% - 20px);
 }
 
 .time-container {
+  flex: 4;
+  /* width: 75%; */
+  float: right;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 10px 10px 10px;
 }
 .hours {
-  font-size: 200px;
+  font-size: 150px;
   width: 20%;
   text-align: center;
   font-weight: 700;
+  text-shadow:0px 0px 20px white;
+  height: 100%;
+  -webkit-text-stroke: 2px white;
+  padding-right: inherit;
+  border: 3px solid white;
 }
 
+.center-display{
+  animation-name: flash;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .steps-container{
-
+padding: inherit;
+margin: inherit;
+width: 100%;
+text-align: center;
+}
+.medium-container{
+  display: flex;
+  flex-direction: row;
+}
+.empty{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
 }
 
 .title{
+  flex: 4;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5%;
   text-align: center;
+  /* padding-right: px; */
+  font-size: 60px;
+  padding-left: 5px;
+  padding-bottom: 15%;
+  font-weight:700;
 }
+
+
+
+/* .Z-decoration{
+  font-size: 100px;
+  text-align: center;
+} */
 
 .instruction{
 
   display: flex;
   flex-direction: row;
+  padding: inherit;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: inherit;
+}
+
+.blur{
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.05));
+  border-radius: 10px;
+  box-shadow: 25px 15px  rgb(255, 41, 105);
+  /* filter: blur(10px); */
+
+}
+
+.first{
+  height: 300px;
+}
+.description{
+  color: blue;
+  font-weight: 700;
+  filter: blue(1px);
+}
+
+.reverse{
+  transform: scale(-1,1);
+  text-align: center;
+}
+
+.reverse:hover{
+  animation-name: back;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+li{
+  font-size: 20px;
+  list-style: none;
+}
+
+ol{
+  padding: 10px 20px 10px 20px;
+}
+
+.one{
+  padding-top: 20%;
+}
+
+.lavalamp{
+  position: fixed;
+  top: 100px;
+  left: 60%;
+  display: inherit;
+  z-index: -1;
+}
+.circle{
+  position: relative;
+  right: 30%;
+  background-color: blue;
+  border-radius: 100%;
+  height: 700px;
+  width:500px;
+  filter: blur(30px);
+}
+
+.pink{
+  right: 70%;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 55, 121);
 }
 
 @keyframes back {
@@ -93,67 +229,25 @@ div {
  }
 }
 
-@media (max-width: 700px) {
-
-  /* more css goes here*/
-  /* if the above statement is true it will apply these styles */
-  /* reset the original */
-  .content {
-    /* flex-direction: column; */
-    padding-top: 30%;
-    width: 100%;
+@keyframes flash {
+  0% {
+    color: white;
+    text-shadow:0px 0px 20px white;
   }
-
-  /* .content :nth-child(1){
-    order:2;
+  49% {
+    color: white;
+    text-shadow:0px 0px 20px white;
   }
-  .content :nth-child(2){
-    order: 3;
+  60%{
+    color: transparent;
+    text-shadow:0px 0px 0px transparent;
   }
-  .content :nth-child(3){
-    order: 1;
-  } */
-
-  .meridiem {
-    justify-content: flex-start;
+  99% {
+    color: transparent;
+    text-shadow:0px 0px 0px transparent;
   }
-
-  .night {
-    width: 50%;
-  }
-
-  .time-container {
-
-  }
-
-  .hours {
-    font-size: 80px;
-    width: 20%;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .title{
-    font-weight: 700;
-    /* padding: 40px 5px 100px 5px;
-    margin-left: 0.83em;
-    margin-right: 0.83em; */
-    padding-top: 20%;
-    padding-bottom: 40%;
-    border-bottom: 10px solid white;
-    font-size: 30px;
-
-  }
-
-  .steps-container{
-    text-align: center;
-    padding: 5px 5px 5px 5px;
-    margin-right: 0.63em;
-    margin-left: .63em;
-  }
-
-  .instruction{
-    padding-top: 20px;
-    flex-direction: column;
+  100%{
+    color: white;
+    text-shadow:0px 0px 20px white;
   }
 }

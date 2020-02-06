@@ -5,70 +5,99 @@
   <meta charset="utf-8">
   <title>Alarm Manual</title>
   <link rel="stylesheet" href="manual.css">
+  <link rel="stylesheet" href="manual-mobile.css">
   <link rel="stylesheet" href="https://use.typekit.net/iva5fuu.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+  <div container ="page">
+  </div>
   <div class="content">
+    <div class= "big-container">
     <div class="meridiem">
-      <div class="night">
-        <div class="dot">
+      <div class="night top">
+        <div class="dot" id="pm">
 
         </div>
-        <h2><span>pm</span></h2>
+        <h2>pm</h2>
 
       </div>
       <div class="night">
-        <div class="dot">
+        <div class="dot" id="am">
 
         </div>
-        <h2><span>am</span></h2>
+        <h2>am</h2>
 
       </div>
-    </div>
+        </div>
+
 
 
     <div class="time-container">
-      <div class="hours">
-        0
+      <div class="hours" id="hour-display">
+        00
       </div>
-      <div class="hours">
-        9
-      </div>
-      <div class="hours">
+      <div class="hours center-display">
         :
       </div>
-      <div class="hours">
-        5
+      <div class="hours" id="minute-display">
+        00
       </div>
-      <div class="hours">
-        8
+      <div class="hours center-display">
+        :
       </div>
+      <div class="hours" id="seconds-display">
+        00
+      </div>
+    </div>
+    </div>
     </div>
 
-    </div>
 
 
 
   <div class="steps-container">
+    <div class="medium-container">
+      <div class="empty">
+        </div>
     <div class="title">
-      how to set up an alarm
+      how to set up a digital alarm system
     </div>
+    </div>
+    <!-- <div class="Z-decoration">
+      <div class="z">
+        z
+      </div>
+      <div class="z">
+        z
+      </div>
+      <div class="z">
+        z
+      </div>
+    </div> -->
     <div class="instruction">
-      <div class="step">
+      <div class="step blur description first">
         <ol>
           <li>Find the ALARM ON/OFF button on the back of the alarm clock.</li>
         </ol>
       </div>
-      <div class="step">
-        <h1>ALARM ON/OFF</h1>
+      <div class="step one">
+        <h1 class="reverse">ALARM ON/OFF</h1>
       </div>
     </div>
-    <div class="instruction">
+    <!-- <div class="instruction">
       <div class="step">
+
+      </div>
+      <div class="step">
+
+      </div>
+    </div> -->
+    <div class="instruction">
+      <div class="step blur description">
         <ol  start="2">
-          <li>Press AlARM ON/OFF and the clock should display the alarm is on.</li>
+          <li>Press ALARM ON/OFF and the clock should display the alarm is on.</li>
         </ol>
       </div>
       <div class="step">
@@ -76,7 +105,7 @@
       </div>
     </div>
     <div class="instruction">
-      <div class="step">
+      <div class="step blur description">
         <ol start="3">
           <li>When the alarm is on, hold the ALARM button and the clock will display 12:00 am.</li>
         </ol>
@@ -86,7 +115,7 @@
       </div>
     </div>
     <div class="instruction">
-      <div class="step">
+      <div class="step blur description">
         <ol start="4">
           <li>While holding onto the ALARM button, press HOUR button until it is the desired hour.</li>
         </ol>
@@ -96,7 +125,7 @@
       </div>
     </div>
     <div class="instruction">
-      <div class="step">
+      <div class="step blur description">
         <ol start="5">
           <li>Then, press the MINUTE button until it is the desired minute.</li>
         </ol>
@@ -106,15 +135,23 @@
       </div>
     </div>
     <div class="instruction">
-      <div class="step">
+      <div class="step blur description">
         <ol start="6">
           <li>Last, release the ALARM button.</li>
         </ol>
       </div>
       <div class="step">
-        DISPLAY
+      <h1>ALARM ON/OFF</h1>
       </div>
     </div>
+    </div>
+
+    <div class="lavalamp">
+        <div class="circle">
+        </div>
+        <div class="circle pink">
+
+        </div>
     </div>
 
   <!-- <h3>how to set up an alarm</h3>
@@ -129,5 +166,7 @@
 
 
 </body>
+<script src="manual.js" charset="utf-8"></script>
+
 
 </html>
