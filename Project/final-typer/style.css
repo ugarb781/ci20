@@ -1,0 +1,91 @@
+body,html{
+  background-color: #04FF78;
+  width: 100%;
+  margin: 0;
+}
+
+body{
+  flex-direction: column;
+  display: flex;
+  font-family: 'Krona One', sans-serif;
+}
+
+div{
+  flex: 1;
+  /* border: 1px solid black; */
+}
+
+.main-action{
+  flex-direction: row;
+  display: flex;
+  height: 75%;
+}
+
+.pink-circle-clock{
+  position: relative;
+  top: 10%;
+  left: 30%;
+  background-color: #FD005B;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+#count{
+  position: relative;
+  top: 30px;
+  font-size: 36px;
+  text-align: center;
+  font-family: helvetica;
+  font-weight: bold;
+  color: white;
+}
+.dancing-footsteps{
+  padding-top: 100px;
+  flex-direction: column;
+  display: flex;
+  flex: 3;
+}
+
+.dancer{
+  position: relative;
+  left: 37%;
+  top: 20%;
+  display: inline-block;
+}
+
+.feet{
+  display: inline-block;
+}
+
+#type-here{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #FD005B;
+}
+
+#cursor{
+  font-family: 'Exo 2', sans-serif;
+  animation: blinker 1s step-end infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.errors{
+  flex-direction: row;
+  display: flex;
+  height: 25%;
+}
+
+.error-footsteps{
+  flex: 3;
+}
+
+.answers{
+  padding: 10px 40px 10px 50px;
+  font-size: 50px;
+  transform: rotate(180deg)
+}

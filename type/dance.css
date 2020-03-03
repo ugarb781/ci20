@@ -1,0 +1,283 @@
+body,html{
+  background-color: #89ff04;
+  width: 100%;
+  margin: 0;
+}
+
+body{
+  font-family: 'Krona One', sans-serif;
+}
+
+div{
+  flex: 1;
+  /* border: 1px solid black; */
+}
+
+.container{
+  flex-direction: row;
+  display: flex;
+}
+
+.main-action{
+  flex-direction: row;
+  display: flex;
+  height: 75%;
+}
+
+.timer{
+  visibility: hidden;
+}
+
+.pink-circle-clock{
+  position: relative;
+  top: 10%;
+  left: 30%;
+  background-color: #FD005B;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+
+}
+
+#count{
+  position: relative;
+  top: 30px;
+  font-size: 36px;
+  text-align: center;
+  font-family: helvetica;
+  font-weight: bold;
+  color: white;
+}
+.dancing-footsteps{
+  padding-top: 100px;
+  flex-direction: column;
+  display: flex;
+  flex: 3;
+}
+
+.prompt{
+  width: 1000px;
+  word-wrap: break-word;
+}
+
+.dancer{
+  position: relative;
+  left: 37%;
+  top: 20%;
+  display: inline-block;
+}
+
+.feet{
+  display: inline-block;
+}
+
+#type-here{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: #FD005B;
+}
+
+#cursor{
+  font-family: 'Exo 2', sans-serif;
+  animation: blinker 1s step-end infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.errors{
+  padding-top: 3%;
+  padding-left: 5%;
+  flex-direction: row;
+  display: flex;
+  height: 25%;
+}
+
+.error-footsteps{
+  flex: 3;
+}
+
+.answers{
+  padding: 10px 40px 10px 50px;
+  font-size: 50px;
+  transform: rotate(180deg)
+}
+
+.errorf{
+  display: none;
+}
+.blue-e-foot-left{
+
+}
+
+.blue-e-foot-right{
+  position: relative;
+  top: 50px;
+}
+
+.footsvg{
+  width: inherit;
+  height: inherit;
+}
+
+.answers{
+  position: inherit;
+  left: inherit;
+  top: inherit;
+}
+
+/*dance positions inspired by https://www.abdn.ac.uk/scottskinner//collectiondisplay.php?Record_Type=DRM&pageNum_collection=3 Donald Richard Mackenzie*/
+.neutral{
+  position: relative;
+  left: 0px;
+  transform: rotate(0deg);
+}
+.pinkALeft{
+  position: relative;
+  left: 0px;
+  transform: rotate(-37deg);
+}
+
+.pinkARight{
+  position: relative;
+  left: 0px;
+  transform: rotate(37deg);
+}
+
+.pinkBRight{
+  position: relative;
+  top: 100px;
+  left: 80px;
+  transform: rotate(90deg);
+}
+
+.pinkCRight{
+  position: relative;
+  bottom: 200px;
+  right:65px;
+  transform: rotate(37deg);
+}
+
+.pinkDRight{
+  position: relative;
+  bottom: 300px;
+  left:80px;
+  transform: rotate(90deg);
+}
+
+.pinkERight{
+  position: relative;
+  bottom: 160px;
+  right:105px;
+  transform: rotate(90deg);
+}
+
+.pinkFLeft{
+  position: relative;
+  transform: rotate(55deg);
+  left: 180px;
+}
+.pinkFRight{
+  position: relative;
+  bottom: 160px;
+  right:300px;
+  transform: rotate(-45deg);
+}
+
+.pinkGLeft{
+  position: relative;
+  left: 0px;
+  bottom: 300px;
+  transform: rotate(-37deg);
+}
+
+.pinkHRight{
+  position: relative;
+  bottom: 230px;
+  right:100px;
+  transform: rotate(-45deg);
+}
+.pinkILeft{
+  position: relative;
+  transform: rotate(-90deg);
+}
+.pinkJLeft{
+  position: relative;
+  right: 70px;
+  transform: rotate(-90deg);
+}
+
+.pinkKLeft{
+  position: relative;
+  bottom: 130px;
+  transform: rotate(-45deg);
+}
+
+.pinkLLeft{
+  position: relative;
+  bottom: 210px;
+  transform: rotate(-90deg);
+}
+
+.pinkMLeft{
+  position: relative;
+  bottom: 100px;
+  transform: rotate(-45deg);
+}
+
+.pinkNLeft{
+  position: relative;
+  bottom: 100px;
+  transform: rotate(45deg);
+}
+
+.pinkPRight{
+  position: relative;
+  top: 200px;
+  right:30px;
+  transform: rotate(140deg);
+}
+
+.pinkSLeft{
+  position: relative;
+  bottom: 450px;
+}
+
+
+
+
+
+@media (max-width: 667px){
+
+  .answers{
+  position: absolute;
+  left: 420px;
+  top: 10px;
+  font-size: 40px;
+  }
+
+  .footsvg{
+    width: 244px;
+    height: 368px;
+  }
+
+  .dancer{
+    left: 16%;
+  }
+  .prompt{
+    width: 800px;
+  }
+  #type-here{
+    font-size: 80px;
+  }
+
+  .timer{
+    display: none;
+  }
+
+  .names-of-dances{
+    display: none;
+  }
+}
