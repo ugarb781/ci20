@@ -1,0 +1,9 @@
+open a terminal folder
+
+cd into the project directory
+
+php -S localhost:8000
+
+from now on type into the browser: localhost: 8000
+this relates to your folder
+if you need to open certain file append the file name after local host: 800/loadJson.html

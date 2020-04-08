@@ -1,0 +1,43 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgb(242, 241, 223);
+  font-family: 'Handlee', cursive;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+h1{
+  font-family: 'Parisienne', cursive;
+  font-size: 100px;
+  color: rgb(42, 44, 235);
+}
+
+.Filter{
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+
+}
+
+
+li{
+  list-style: none;
+  border: 3px solid black;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.TimeLine{
+  display: flex;
+  flex-direction: column;
+}
+
+.TimeLine li{
+  border: inherit;
+  text-align: right;
+}
