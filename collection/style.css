@@ -4,6 +4,7 @@ html,body{
   margin: 0;
   background: rgb(242, 241, 223);
   font-family: 'Handlee', cursive;
+  color: rgb(42, 44, 235);
 }
 
 .container{
@@ -11,11 +12,32 @@ html,body{
   flex-direction: column;
 }
 
+img{
+  width: 30%;
+  height: auto;
+}
+
 h1{
   font-family: 'Parisienne', cursive;
   font-size: 100px;
-  color: rgb(42, 44, 235);
+  transform: rotate(-5deg);
+  padding-left: 20px;
 }
+
+#people{
+  width: 60%;
+  word-wrap: break-word;
+  padding: 5px 20px 5px 20px;
+  transform: rotate(-5deg);
+}
+
+.nameStyle{
+  font-family: times;
+  font-size: 30px;
+  padding: 5px 20px 5px 20px;
+  font-weight: bold;
+}
+
 
 .Filter{
   display: flex;
