@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    fetch("data.json")
+    .then(function(blob){return blob.json();})
+    .then(function(json){buildPage(json);});
+
+    function buildPage(data){
+      //console.log(data);
+      //for(var i = 0; i < data.length; i = i+ 1){
+      //  console.log(data[i]);
+      //}
+      //filter is asking to match
+      //asking for true or false
+      var fuji= data.filter(function(entry){return entry.Type == "FUJIFILM"; });
+      console.log(fuji);
+    }
+    </script>
+  </body>
+</html>

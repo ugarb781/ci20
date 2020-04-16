@@ -1,0 +1,135 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background: rgb(242, 241, 223); */
+  font-family: 'Handlee', cursive;
+  color: rgb(42, 44, 235);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+#gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 30px 30px 30px;
+}
+
+.photoarea{
+  display: flex;
+  flex-direction: row;
+}
+
+img{
+  height: 200px;
+  width: auto;
+  padding: 10px 10px 40px 10px;
+  position: relative;
+  bottom: 3px;
+  animation-name: appear;
+  animation-duration:2s;
+
+}
+
+img:hover{
+  opacity: .5;
+  cursor: pointer;
+}
+
+h1{
+  font-family: 'Parisienne', cursive;
+  font-size: 100px;
+  transform: rotate(-5deg);
+  padding-left: 20px;
+}
+
+#people{
+  width: 60%;
+  word-wrap: break-word;
+  padding: 5px 20px 5px 20px;
+  transform: rotate(-5deg);
+}
+
+.nameStyle{
+  font-family: times;
+  font-size: 30px;
+  padding: 5px 20px 5px 20px;
+  font-weight: bold;
+}
+
+
+.Filter{
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+
+}
+
+
+li{
+  list-style: none;
+  border: 3px solid black;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.TimeLine{
+  display: flex;
+  flex-direction: column;
+}
+
+.TimeLine li{
+  border: inherit;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+}
+
+#mmask{
+  stroke-dasharray: 3000;
+  animation-name: cursive;
+  animation-timing-function: ease-in;
+  animation-duration:4s;
+}
+
+#imask{
+  stroke-dasharray: 3000;
+  animation-name: cursive;
+  animation-timing-function: ease-in;
+  animation-duration:3s;
+}
+
+#ueridamask{
+  stroke-dasharray: 3000;
+  animation-name: cursive;
+  animation-timing-function: ease-in;
+  animation-duration:4s;
+}
+
+@keyframes cursive{
+  0% {
+    opacity: 0;
+        stroke-dashoffset: 3000;
+    }
+  100%{
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes appear{
+  from{
+    position: relative;
+    bottom: 3px;
+    opacity: 0;
+  }
+
+  to{
+    bottom: 20px;
+    opacity: 1;
+  }
+}
