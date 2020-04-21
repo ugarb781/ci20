@@ -8,10 +8,28 @@ html, body {
   font-family: 'Merriweather', serif;
 }
 
+
+.items{
+  display: none;
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: .75s;
+}
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 li{
   list-style: none;
   display: inline-block;
-  padding: 10px 10px 0px 50px;
+  padding: 20px 10px 0px 50px;
 }
 
 li:hover{
@@ -46,7 +64,7 @@ img:hover {
 }
 
 #mainimage{
-  flex: 3;
+  flex: 2;
   text-align: center;
 }
 
@@ -54,10 +72,12 @@ img:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 40%;
-  width: auto;
+  width: 30%;
+  height: auto;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 20%;
-  padding-bottom: 30%;
+  padding-bottom: 50%;
   /* margin-top: 60px; */
 
 }
@@ -98,9 +118,9 @@ img:hover {
   display: flex;
   overflow: scroll;
   flex-direction: row;
+    width: 100%;
   /* flex: 2; */
   /* height: 100%;
-  width: 100%; */
   /* overflow: scroll; */
   /* flex:3; */
 }
@@ -126,70 +146,10 @@ img:hover {
   position: fixed;
 }
 
-
-.corners-menu{
-  position: fixed;
-  left: 65%;
-  justify-content: space-around;
-  height: 80%;
-  width: 25%;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.pointed{
-  border: 3px solid rgb(42, 44, 235);
-  /* position: fixed; */
-  height: 25px;
-  width: 35px;
-  /* top: 30%;
-  left: 65%; */
-}
-
-.rounded{
-  border: 3px solid rgb(42, 44, 235);
-  /* position: fixed; */
-  height: 25px;
-  width: 35px;
-  border-radius: 10px;
-  /* top: 40%;
-  left: 65%; */
-}
-
-/* .zig-zag{
-position: fixed;
-top: 50%;
-left: 65%;
-
-} */
-
-.portrait{
-
-  border: 3px solid rgb(42, 44, 235);
-  background-color:rgb(42, 44, 235);
-  /* position: fixed; */
-  height: 35px;
-  width: 25px;
-  /* top: 80%;
-  left: 66%; */
-}
-
-.landscape{
-
-  border: 3px solid rgb(42, 44, 235);
-  background-color:rgb(42, 44, 235);
-  /* position: fixed; */
-  height: 25px;
-  width: 35px;
-  /* top: 70%;
-  left: 65%; */
-}
-
 .timemenu{
   /* float: left; */
   position: fixed;
+  top: inherit;
   width: 75%;
   height: 10%;
   background-color: white;
@@ -242,7 +202,7 @@ left: 65%;
   width: 30px;
   top: 4%;
   left: 95%;
-  /* transform: rotate(45deg); */
+
 }
 
 #exit:hover{
@@ -250,21 +210,9 @@ left: 65%;
   background:white;
   cursor: pointer;
 }
-/*
-#x:after {
-  display: inline;
-  flex: inherit;
-  background: white;
-  content: "";
-  height: 10px;
-  left: -25px;
-  position: absolute;
-  top: 25px;
-  width: 60px;
-} */
 
 .information-content{
-  /* padding-top: 10%; */
+  overflow: scroll;
   color: white;
   position: fixed;
   flex-direction: row;
@@ -272,9 +220,119 @@ left: 65%;
   width: 100%;
   height: 100%;
 }
-
-.description{
-  /* flex: 10; */
+.header{
+  flex: .2;
+}
+.description-box{
   flex-direction: column;
+  text-align: left;
   display: flex;
+  flex: 1.5;
+
+  /* padding-left: 40%: */
+
+}
+
+
+#title h1{
+  padding-top: 30%;
+  padding-right: 6%;
+  font-size: 30px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+
+@media (max-width: 441px){
+
+  html, body {
+    font-size: 20px;
+  }
+  #container{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .timemenu{
+    top: 90%;
+    width: 100%;
+    text-align: center;
+  }
+
+  li{
+    display:inline-block;
+    padding: 10px 10px 0px 10px;
+  }
+
+  li:hover{
+    cursor: pointer;
+  }
+
+  .galleryarea {
+    /* position: fixed; */
+    padding-top: 10%;
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    flex-direction: row;å
+  }
+
+  .years{
+    padding-left: 15px;
+  }
+  .years li{
+    /* display: none; */
+
+    transform: inherit;
+    padding: 0px 0px 0px 0px;
+
+  }
+
+
+  .header{
+    flex: .2;
+  }
+  .filterarea {
+    box-shadow: inherit;
+    float:inherit;
+    /* position: fixed; */
+    height: 90%;
+    width: 100%;
+    background-color: #ffeada;
+    text-align: left;
+    display: none;
+    flex-direction: column;
+  }
+
+  #exit {left: 80%;}
+
+  .information-content{flex-direction: column;}
+  #mainimage{
+    flex: 1;
+    text-align: center;
+  }
+
+  #mainimage img{
+    width: 90%;
+    /* height: auto; */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40%;
+    padding-bottom: inherit;
+    /* margin-top: 60px; */
+  }
+
+
+  #title h1 {
+    padding-top: 5%;
+    padding-left: 6%;
+    font-size: 30px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
 }
