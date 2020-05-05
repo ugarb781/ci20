@@ -1,0 +1,113 @@
+html, body{
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+}
+
+.result{
+display: flex;
+flex-direction: row;
+/* height: 100%; */
+/* z-index: 1; */
+}
+
+.book-container{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.controls{
+  /* position: fixed; */
+  /* position: absolute; */
+  padding-top: 10%;
+  height: 100%;
+  /* z-index: 0; */
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-family: helvetica;
+}
+
+p{
+  font-weight: bold;
+  /* font-weight:  */
+}
+
+div{
+  flex: 1;
+  word-wrap: break-word;
+}
+
+.result{
+  padding-top: 3%;
+}
+
+
+.book-covers:nth-child(2n+1){
+  margin-left: 16%;
+  transform: skew(-5deg);
+}
+
+.book-covers:nth-child(even){
+  margin-left: 15%;
+  transform: skew(-2deg);
+}
+
+.book-covers:hover{
+  border: 3px solid white;
+  opacity: .5;
+}
+
+.book-covers:hover{
+  cursor: pointer;
+}
+
+
+#selected-book{
+  margin-left: 15%;
+  top: 39%;
+
+  transform: rotate(70deg);
+
+  /* flex: inherit; */
+  position:absolute;
+  width : 30%;
+  height: auto;
+}
+
+.buttons{
+  /* border: 2px solid black; */
+  /* border-radius: 20px; */
+  /* width: 10%; */
+  /* display: inline-block; */
+  /* width:20%; */
+}
+
+.buttons:hover{
+  cursor: pointer;
+}
+
+.project-sort{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a{
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited{
+  color: black;
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
